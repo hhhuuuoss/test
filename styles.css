@@ -1,0 +1,547 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('./Background.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fefefe;
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 0.5 = 50% dark, change to taste */
+  z-index: -1; /* Keeps it behind the content */
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+
+.tagline {
+  color: #bbb;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+.about p {
+  font-size: 2.1rem;
+  line-height: 1.6;
+}
+
+.tokenomics ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.tokenomics li {
+  margin: 0.5rem 0;
+}
+
+.image-section .image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.image-section img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px transparent;
+}
+
+.copy-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.copy-box input {
+  padding: 0.7rem;
+  width: 300px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.copy-box button {
+  padding: 0.7rem 1.2rem;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #131ddc;
+}
+
+.copy-box button:hover {
+  background: #dc1385;
+}
+
+.links .btn {
+  display: inline-block;
+  background: #131ddc;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+ 
+}
+
+
+
+.buy {
+  background: #131ddc;
+  color: #131ddc;
+}
+
+.buy:hover {
+  background: #131ddc;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+.hero-image {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px transparent;
+}
+
+.hero {
+  padding: 50px 0;
+  background-color: transparent; /* No background */
+}
+
+.image-row img {
+  max-width: 120%; /* bigger than their natural space */
+  transform: scale(1.2); /* zoom in */
+   justify-content: center;
+}
+
+.tokenomics-header {
+    width: 100%;
+    max-width: 600px; /* controls how big it appears on large screens */
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto; /* center and add spacing below */
+}
+
+.moving-banner {
+    position: relative;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.6); /* dark background for contrast */
+    padding: 1rem 0;
+    transform: rotate(-2deg); /* slight diagonal tilt */
+}
+
+.moving-banner span {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    color: white;
+    animation: scrollBanner 15s linear infinite;
+}
+
+
+
+.section-header-img {
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.about-text-box {
+  max-width: 700px;
+  margin: 1rem auto 2rem auto;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  color: #fefefe;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.spinning-bone-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0; /* spacing above and below */
+}
+
+.spinning-bone {
+  width: 200x; /* adjust size as needed */
+  height: 200px; /* keep square shape */
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spinning-bone {
+  width: 200px;
+  height: 200px;
+  animation: spin 6s linear infinite;
+  transform-origin: center center; /* explicitly set pivot to center */
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;  /* Above bones container */
+}
+
+.links .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;          /* responsive width - 80% of viewport width */
+  max-width: 400px;     /* max width so they don’t get too big on large screens */
+  height: 140px;
+  background: url('paw.png') no-repeat center center;
+  background-size: contain;
+  color: white;
+  font-weight: bold;
+  font-size: 0.5rem;
+  border: none;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+  user-select: none;
+  position: relative;
+  overflow: visible;
+  padding: 0;
+  margin: 0.5rem auto;  /* centers horizontally with auto margin */
+  z-index: 0;
+}
+
+
+.links .btn:hover {
+  background-image: url('paw-pink.png');
+}
+
+
+.links .btn span {
+  position: absolute;
+  top: 60%; /* adjust vertical position */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  pointer-events: none;
+  font-size: 0.8rem;  /* smaller font size here */
+}
+
+.animated-gif-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.about-animation {
+  width: 100%;          /* fills the container width */
+  max-width: 600px;     /* but never bigger than 600px */
+  height: auto;         /* keeps aspect ratio */
+  object-fit: contain;
+  border-radius: 12px;
+ 
+  margin: 1rem auto;    /* center with some spacing */
+  display: block;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #ffffff; /* Pink meme vibe */
+}
+
+/* Body text */
+body, p, li, span {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 2.1rem;
+  line-height: 1.6;
+  color: #fff;
+  font-style: bold;
+
+}
+
+.scrolling-banner {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #ff2ecc; /* Meme pink */
+  padding: 10px 0;
+}
+
+.scrolling-text {
+  display: inline-block;
+  animation: scroll-left 15s linear infinite;
+  
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  color: white;
+  
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scrolling-banner {
+  overflow: hidden;
+  background: #ff2ecc;
+  white-space: nowrap;
+}
+
+.scrolling-track {
+  display: inline-block;
+  animation: scroll-left 12s linear infinite;
+}
+
+.scrolling-track span {
+  display: inline-block;
+  padding-right: 2rem; /* space between loops */
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  color: white;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0); /* starts immediately on screen */
+  }
+  to {
+    transform: translateX(-50%); /* shifts by half width to loop perfectly */
+  }
+}
+
+.banner-track span {
+  display: inline-block;
+  padding-right: 2rem; /* space between loops */
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  color: white;
+}
+.banner-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 12s linear infinite;
+}
+
+.banner-track span {
+  display: inline-block;
+  padding-right: 2rem; /* spacing between repeats */
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  color: white;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0); /* start fully visible immediately */
+  }
+  to {
+    transform: translateX(-50%); /* shift by half the total width */
+  }
+}
+
+
+.how-to-buy-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  bottom: 70px;
+}
+
+.how-to-buy-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+
+}
+
+.how-to-buy-content {
+  position: absolute;
+  top: 50%;
+  right: 2rem;  /* spacing from right edge */
+  transform: translateY(-50%);
+  max-width: 350px; /* controls width of content box */
+  color: white;
+  font-family: 'Bangers', cursive;
+  text-align: right;
+  animation: floatIn 1s ease forwards;
+  opacity: 0; /* start hidden for animation */
+}
+
+.steps {
+  margin-top: 1rem;
+}
+
+.step {
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+}
+
+/* Simple float-in animation from right */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%) translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .how-to-buy-content {
+    position: static;
+    transform: none;
+    max-width: 100%;
+    padding: 1rem;
+    text-align: center;
+    opacity: 1;
+    animation: none;
+  }
+  
+  .step {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer {
+  margin-top: 1.5rem;
+  padding: 0.5rem 0;
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+.links .btn {
+  /* existing styles... */
+  transition: transform 0.3s ease; /* smooth scale transition */
+}
+
+.links .btn:hover {
+  background-image: none !important; /* remove any hover background image */
+  transform: scale(2.05); /* scale up slightly */
+}
+
+.motorbike-gif-container {
+  position: relative;
+  width: 100%;
+  height: 150px; /* adjust height */
+  overflow: hidden;
+  margin-top: 1rem; /* space between sections */
+}
+
+.motorbike-gif {
+  position: absolute;
+  top: 50%; 
+  left: -30vw; /* start off-screen */
+  height: 300px; /* adjust size */
+  transform: translateY(-50%);
+  animation: rideAcross 5s linear infinite;
+}
+
+@keyframes rideAcross {
+  0% {
+    left: -300vw;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.roadmap {
+  max-width: 700px;
+  margin: 3rem auto;
+  text-align: center;
+  color: white;
+  font-family: 'Bangers', cursive;
+}
+
+.roadmap-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+  font-size: 1.8rem;
+  line-height: 2.2;
+}
+
+.roadmap-list li {
+  margin: 1rem 0;
+
+ 
+  padding: 1rem 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.roadmap-list li span {
+  font-size: 2.2rem;
+}
+
+.roadmap .section-header-img {
+  max-width: 90%;   /* Make it bigger */
+  height: auto;
+  margin-bottom: 2rem;  /* Add some spacing below */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
